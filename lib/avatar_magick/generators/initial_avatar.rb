@@ -19,7 +19,7 @@ module AvatarMagick
         font        = opts[:font] || content.env[:avatar_magick][:font]
         font_size   = opts[:font_size] || 72
         # extract the first letter of the first 3 words and capitalize
-        text = (string.split(/\s/)- ["", nil]).map { |t| t[0].upcase }.slice(0, 3).join('')
+        text = (string.split(/\s/)- ["", nil]).map { |t| t[0].upcase }.slice(0, 2).join('')
 
         w, h = size.split('x').map { |d| d.to_i }
         h ||= w
